@@ -255,13 +255,14 @@ VALUES
     (25, 'The Incredible Hulk', 1, 1, 1, 112, 2008),
     (26, 'Black Panther', 1, 1, 1, 134, 2018),
     (27, 'Guardians of the Galaxy', 1, 1, 1, 121, 2014),
-    (28, 'The Avengers', 1, 25, 1, 143, 2012),
-    (29, 'Toy Story', 1, 24, 1, 81, 1995),
+    (28, 'The Silence of the Lambs', 1, NULL, 1, 118, 1991),
+    (29, 'Jason Bourne', 1, 29, 1, 123, 2016),
     (30, 'The Matrix', 1, 17, 1, 136, 1999),
     (31, 'Attack on Titan', 3, NULL, 75, 24, 2013),
     (32, 'One Piece', 3, NULL, 1000, 23, 1999),
     (33, 'Naruto', 3, NULL, 500, 22, 2002),
     (34, 'Death Note', 3, NULL, 37, 23, 2006);
+	
 
 
 
@@ -439,36 +440,74 @@ VALUES
 INSERT INTO ContentGenre
     (ContentID, GenreID)
 VALUES
-    (1, 1),
-    (1, 2),
-    (2, 3),
-    (2, 4),
-    (3, 5),
-    (3, 6),
-    (4, 7),
-    (4, 8),
-    (5, 9),
-    (5, 10),
-    (6, 11),
-    (6, 12),
-    (7, 13),
-    (7, 14),
-    (8, 15),
-    (8, 16),
-    (9, 17),
-    (9, 18),
-    (10, 19),
-    (10, 20),
-    (11, 21),
-    (11, 22),
-    (12, 23),
-    (12, 24),
-    (13, 25),
-    (13, 26),
-    (14, 27),
-    (14, 28),
-    (15, 29),
-    (15, 30);
+    (1, 1), -- Star Wars: A New Hope (Action)
+    (1, 2), -- Star Wars: A New Hope (Adventure)
+    (2, 3), -- Harry Potter and the Philosopher's Stone (Animation)
+    (2, 4), -- Harry Potter and the Philosopher's Stone (Comedy)
+    (3, 5), -- Indiana Jones and the Raiders of the Lost Ark (Crime)
+    (3, 6), -- Indiana Jones and the Raiders of the Lost Ark (Documentary)
+    (4, 7), -- James Bond: Casino Royale (Drama)
+    (4, 8), -- James Bond: Casino Royale (Fantasy)
+    (5, 9), -- Iron Man (Historical)
+    (5, 10), -- Iron Man (Horror)
+    (6, 11), -- Wonder Woman (Mystery)
+    (6, 12), -- Wonder Woman (Romance)
+    (7, 13), -- Spider-Man: Homecoming (Sci-Fi)
+    (7, 14), -- Spider-Man: Homecoming (Thriller)
+    (8, 15), -- Harry Potter and the Chamber of Secrets (War)
+    (8, 16), -- Harry Potter and the Chamber of Secrets (Western)
+    (9, 17), -- The Lord of the Rings: The Fellowship of the Ring (Biography)
+    (9, 18), -- The Lord of the Rings: The Fellowship of the Ring (Family)
+    (10, 19), -- Pirates of the Caribbean: The Curse of the Black Pearl (Musical)
+    (10, 20), -- Pirates of the Caribbean: The Curse of the Black Pearl (Sport)
+    (11, 21), -- Sherlock Holmes (Superhero)
+    (11, 22), -- Sherlock Holmes (Spy)
+    (12, 23), -- Star Wars: The Empire Strikes Back (Supernatural)
+    (12, 24), -- Star Wars: The Empire Strikes Back (Psychological)
+    (13, 25), -- X-Men (Noir)
+    (13, 26), -- X-Men (Historical Fiction)
+    (14, 27), -- The Hunger Games (Coming-of-age)
+    (14, 28), -- The Hunger Games (Satire)
+    (15, 29), -- Iron Man 2 (Parody)
+    (15, 30), -- Iron Man 2 (Experimental)
+    (16, 21), -- Black Widow (Superhero)
+    (16, 13), -- Black Widow (Sci-Fi)
+    (17, 21), -- Thor (Superhero)
+    (17, 13), -- Thor (Sci-Fi)
+    (18, 2), -- Mickey Mouse Clubhouse (Adventure)
+    (18, 18), -- Mickey Mouse Clubhouse (Family)
+    (19, 3), -- Frozen (Animation)
+    (19, 18), -- Frozen (Family)
+    (20, 3), -- Mulan (Animation)
+    (20, 18), -- Mulan (Family)
+    (21, 7), -- The Lion King (Drama)
+    (21, 18), -- The Lion King (Family)
+	(22, 17), -- The Lord of the Rings: The Two Towers (Biography)
+    (22, 18), -- The Lord of the Rings: The Two Towers (Family)
+    (23, 7), -- The Dark Knight (Drama)
+    (23, 14), -- The Dark Knight (Thriller)
+    (24, 7), -- Man of Steel (Drama)
+    (24, 21), -- Man of Steel (Superhero)
+    (25, 7), -- The Incredible Hulk (Drama)
+    (25, 21), -- The Incredible Hulk (Superhero)
+    (26, 1), -- Black Panther (Action)
+    (26, 21), -- Black Panther (Superhero)
+    (27, 1), -- Guardians of the Galaxy (Action)
+    (27, 13), -- Guardians of the Galaxy (Sci-Fi)
+    (28, 7), -- The Silence of the Lambs (Drama)
+    (28, 24), -- The Silence of the Lambs (Psychological)
+    (29, 5), -- Jason Bourne (Crime)
+    (29, 14), -- Jason Bourne (Thriller)
+    (30, 1), -- The Matrix (Action)
+    (30, 17), -- The Matrix (Biography)
+    (31, 11), -- Attack on Titan (Mystery)
+    (31, 13), -- Attack on Titan (Sci-Fi)
+    (32, 11), -- One Piece (Mystery)
+    (32, 13), -- One Piece (Sci-Fi)
+    (33, 11), -- Naruto (Mystery)
+    (33, 7), -- Naruto (Drama)
+    (34, 11), -- Death Note (Mystery)
+    (34, 14); -- Death Note (Thriller)
 
 
 INSERT INTO ContentStudio
@@ -509,34 +548,33 @@ VALUES
 INSERT INTO ContentCharacter
     (ContentID, CharacterID)
 VALUES
-    (1, 1),
-    (1, 2),
-    (2, 3),
-    (2, 4),
-    (3, 5),
-    (3, 6),
-    (4, 7),
-    (4, 8),
-    (5, 9),
-    (5, 10),
-    (6, 11),
-    (6, 12),
-    (7, 13),
-    (7, 14),
-    (8, 15),
-    (8, 16),
-    (9, 17),
-    (9, 18),
-    (10, 19),
-    (10, 20),
-    (11, 21),
-    (11, 22),
-    (12, 23),
-    (12, 24),
-    (13, 25),
-    (13, 26),
-    (14, 27),
-    (14, 28),
-    (15, 29),
-    (15, 30);
-
+    (1, 1), -- Star Wars: A New Hope - Luke Skywalker
+    (2, 2), -- Harry Potter and the Philosopher's Stone - Harry Potter
+    (3, 3), -- Indiana Jones and the Raiders of the Lost Ark - Indiana Jones
+    (4, 4), -- James Bond: Casino Royale - James Bond
+    (5, 5), -- Iron Man - Iron Man
+    (6, 6), -- Wonder Woman - Wonder Woman
+    (7, 7), -- Spider-Man: Homecoming - Spider-Man
+    (8, 8), -- Harry Potter and the Chamber of Secrets - Hermione Granger
+    (9, 9), -- The Lord of the Rings: The Fellowship of the Ring - Frodo Baggins
+    (10, 10), -- Pirates of the Caribbean: The Curse of the Black Pearl - Captain Jack Sparrow
+    (11, 11), -- Sherlock Holmes - Sherlock Holmes
+    (12, 12), -- Star Wars: The Empire Strikes Back - Darth Vader
+    (13, 13), -- X-Men - Wolverine
+    (14, 14), -- The Hunger Games - Katniss Everdeen
+    (15, 15), -- Iron Man 2 - Tony Stark
+    (16, 16), -- Black Widow - Black Widow
+    (17, 17), -- Thor - Thor
+    (18, 18), -- Mickey Mouse Clubhouse - Mickey Mouse
+    (19, 19), -- Frozen - Elsa
+    (20, 20), -- Mulan - Mulan
+    (21, 21), -- The Lion King - Simba
+    (22, 22), -- The Lord of the Rings: The Two Towers - Gandalf
+    (23, 23), -- The Dark Knight - Batman
+    (24, 24), -- Man of Steel - Superman
+    (25, 25), -- The Incredible Hulk - Hulk
+    (26, 26), -- Black Panther - Black Panther
+    (27, 27), -- Guardians of the Galaxy - Groot
+    (28, 28), -- The Avengers - Hannibal Lecter
+    (29, 29), -- Toy Story - Jason Bourne
+    (30, 30); -- The Matrix - Neo
