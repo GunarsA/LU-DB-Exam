@@ -58,7 +58,7 @@ CREATE TABLE [Login]
 (
     ID INT PRIMARY KEY,
     UserID INT,
-    Username VARCHAR(255),
+    Username VARCHAR(255) UNIQUE,
     [Password] VARCHAR(255),
     FOREIGN KEY (UserID) REFERENCES [User](ID)
 );
