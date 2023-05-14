@@ -221,3 +221,20 @@ WHERE ContentID = 4;
 
 --Retrieve the number of ratings that a specific content has received.
 
+
+SELECT c.ID, c.Title, AVG(r.Score) OVER (PARTITION BY r.ContentID) AS AvgScore
+FROM [Content] c
+INNER JOIN Rating r ON c.ID = r.ContentID
+ORDER BY AvgScore DESC;
+
+--Get the average rating score for each content and order by the average score in descending order:
+
+
+
+SELECT c.ID, c.Title, COUNT(*) OVER (PARTITION BY cc.ContentID) AS CharacterCount
+FROM [Content] c
+INNER JOIN ContentCharacter cc ON c.ID = cc.ContentID
+ORDER BY CharacterCount DESC;
+
+--Get the total number of characters in each content and order by the count in descending order:
+
