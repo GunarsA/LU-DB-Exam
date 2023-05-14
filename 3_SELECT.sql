@@ -1,5 +1,5 @@
 
-SELECT COUNT(*) FROM [User];
+SELECT COUNT(*) as user_count FROM [User];
 
 --This statement selects the count of all rows in the "User" table.
 
